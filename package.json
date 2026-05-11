@@ -1,0 +1,45 @@
+{
+    "name": "sinth-vscode",
+    "displayName": "Sinth",
+    "description": "Syntax highlighting, error diagnostics, and autocomplete for Sinth",
+    "version": "0.0.1",
+    "publisher": "yannosay",
+    "license": "AGPL-3.0",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "sinth",
+                "extensions": [
+                    ".sinth"
+                ],
+                "aliases": [
+                    "Sinth"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "sinth",
+                "scopeName": "source.sinth",
+                "path": "./syntaxes/sinth.tmLanguage.json"
+            }
+        ]
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "type": "commonjs",
+    "dependencies": {
+        "vscode-languageclient": "^9.0.0"
+    }
+}

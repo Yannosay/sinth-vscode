@@ -1,0 +1,98 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Sinth",
+    "patterns": [
+        { "include": "#comments" },
+        { "include": "#strings" },
+        { "include": "#keywords" },
+        { "include": "#types" },
+        { "include": "#components" },
+        { "include": "#attributes" },
+        { "include": "#operators" },
+        { "include": "#numbers" }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-dash.sinth",
+                    "match": "--(?!\\[).*$"
+                },
+                {
+                    "name": "comment.block.sinth",
+                    "begin": "--\\[",
+                    "end": "\\]--"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.sinth",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        { "name": "constant.character.escape.sinth", "match": "\\\\." }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.sinth",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        { "name": "constant.character.escape.sinth", "match": "\\\\." }
+                    ]
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.sinth",
+                    "match": "\\b(page|var|if|else|for|in|import|as|css|component|style|script|global|lang|custom-element|custom|true|false|null)\\b"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "storage.type.sinth",
+                    "match": "\\b(int|str|bool|str\\[\\]|obj)\\b"
+                }
+            ]
+        },
+        "components": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.class.sinth",
+                    "match": "\\b([A-Z][a-zA-Z]*)\\b"
+                }
+            ]
+        },
+        "attributes": {
+            "patterns": [
+                {
+                    "name": "entity.other.attribute-name.sinth",
+                    "match": "\\b([a-zA-Z][a-zA-Z0-9]*)\\s*(?=:)"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.sinth",
+                    "match": "==|!=|<=|>=|<|>|\\+|\\-|\\*|/|="
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.sinth",
+                    "match": "\\b(-?\\d+(\\.\\d+)?)\\b"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.sinth"
+}
