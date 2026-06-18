@@ -1,17 +1,27 @@
 {
     "name": "sinth-vscode",
-    "displayName": "Sinth",
-    "description": "Syntax highlighting, error diagnostics, and autocomplete for Sinth",
-    "version": "0.0.1",
-    "publisher": "yannosay",
+    "displayName": "Sinth Code Lang Highlighting",
+    "description": "Syntax highlighting for faster coding with Sinth",
+    "icon": "icon.png",
+    "version": "0.0.3",
+    "publisher": "YannosayProductions",
+    "author": "Yannosay Productions",
     "license": "AGPL-3.0",
     "engines": {
         "vscode": "^1.80.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Yannosay/sinth-vscode"
+    },
     "categories": [
         "Programming Languages"
     ],
-    "main": "./extension.js",
+    "keywords": [
+        "sinth",
+        "syntax highlighting",
+        "language support"
+    ],
     "contributes": {
         "languages": [
             {
@@ -35,11 +45,5 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "type": "commonjs",
-    "dependencies": {
-        "vscode-languageclient": "^9.0.0"
     }
 }
