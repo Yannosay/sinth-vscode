@@ -1,12 +1,7 @@
-# Sinth Language Support
+# Sinth for VS Code (previous version)
 
-## Sinth Syntax Formatting Support for faster Coding with Sinth and Sinth's syntax.
+This repository holds the first Sinth extension (syntax highlighting only, versions 0.0.x).
 
-Created by **Yannosay Productions**
+**The current extension lives in the Sinth repository:** [Yannosay/sinth/vscode-sinth](https://github.com/Yannosay/sinth/tree/main/vscode-sinth). It adds IntelliSense with auto-import, hover docs, go to definition, compiler diagnostics and project commands for Sinth 5.
 
-Built for *Sinth Language*
-
-
----
-- *Where is my beloved **IntelliSense?***
-A: **IntelliSense** support will arrive with the release of **Sinth 4.0.0**!
+Install it by downloading `sinth-vscode-*.vsix` from the [latest Sinth release](https://github.com/Yannosay/sinth/releases/latest) and running **Extensions: Install from VSIX** in VS Code.
